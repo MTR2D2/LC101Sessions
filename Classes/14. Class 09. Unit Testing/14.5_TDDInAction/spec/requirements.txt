@@ -1,0 +1,24 @@
+
+Requirements
+The features for this project have already been broken down into small testable units. Let's review them and then we will take it slow, one step at a time.
+
+1. Take in a transmission string and return an object.
+2. Return -1 if the transmission does NOT contain "::".
+3. Returned object should contain an id property
+4. The value of id is the part of the transmission before the "::"
+5. The id property should be of type Number
+6. Returned object should contain a rawData property
+7. The value of rawData is the part of the transmission after the "::"
+8. Return -1 for the value rawData if the rawData part of the transmission does NOT start with < and end with >
+
+Other:
+Use the steps demonstrated above to implement all or some of the below features. Take your time, you can do it!
+1. Trim leading and trailing whitespace from transmission.
+2. Return -1 if the id part of the transmission can not be converted to a number.
+3. Return -1 if more than one "::" found in transmission
+4. Return -1 for value of rawData if anything besides numbers are present
+5. Allow for multiple rawData values
+    - rawData would be returned as an array of numbers
+    - Get the new test working and then fix any broken existing tests
+    - Example Transmission: "9701::<21212.232323.242424>"
+    - Result: { id: 9701, rawData: [21212,232323,242424] }
